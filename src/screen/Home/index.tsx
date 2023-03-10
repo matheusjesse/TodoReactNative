@@ -6,6 +6,7 @@ import {RootStackParamList} from '../../../App';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {TodoContextType} from '../../@types/types.todo';
 import {TodoContext} from '../../context/todoContext';
+import TodoSection from '../../components/TodoSection';
 
 type ProfileScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -29,6 +30,7 @@ function Home({navigation}: Props): JSX.Element {
       <TouchableOpacity onPress={() => updateTheme(!loadThemeColor())}>
         <Text>Click Teste</Text>
       </TouchableOpacity>
+      <TodoSection />
     </HomeContainer>
   );
 }

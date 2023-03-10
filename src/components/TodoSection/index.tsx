@@ -1,11 +1,13 @@
 import {Text} from '../../screen/Home/style';
 import React from 'react';
 import TodoSectionContainer from './style';
+import TodoDayPeriod from '../TodoDayPeriod';
 
-function TodoSection(): JSX.Element {
+function TodoSection() {
   return (
     <TodoSectionContainer>
-      <Text>Test</Text>
+      <Text>A fazeres de hoje</Text>
+      <TodoDayPeriod title={'Manhã'} />
     </TodoSectionContainer>
   );
 }
