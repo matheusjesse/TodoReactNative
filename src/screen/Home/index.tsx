@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {darkContainer, Text, whiteContainer} from './style';
+import {ColorContainer, Text} from './style';
 import HomeContainer from './style';
 import {RootStackParamList} from '../../../App';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -22,14 +22,7 @@ function Home({navigation}: Props): JSX.Element {
   ) as TodoContextType;
   return (
     <HomeContainer>
-      <Text
-        style={
-          loadThemeColor() === true
-            ? whiteContainer.container
-            : darkContainer.container
-        }>
-        HomeM!
-      </Text>
+      <Text style={ColorContainer.container}>HomeM!</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Register')}>
         <Text>Click Here</Text>
       </TouchableOpacity>

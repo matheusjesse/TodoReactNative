@@ -7,6 +7,12 @@ const Text = styled.Text`
   font-size: 45px;
 `;
 
+const ColorContainer = StyleSheet.create({
+  container: {
+    color: `${theme.ThemeColor.secondary}`,
+  },
+});
+
 const whiteContainer = StyleSheet.create({
   container: {
     color: `${theme.whiteTheme.primary}`,
@@ -19,4 +25,4 @@ const darkContainer = StyleSheet.create({
   },
 });
 export default HomeContainer;
-export {Text, whiteContainer, darkContainer};
+export {Text, whiteContainer, darkContainer, ColorContainer};
