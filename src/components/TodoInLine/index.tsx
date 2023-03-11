@@ -1,5 +1,10 @@
 import React from 'react';
-import TodoInLineContainer, {CheckButton, Text} from './style';
+import TodoInLineContainer, {
+  CheckButton,
+  styles,
+  Text,
+  TodoTextContainer,
+} from './style';
 import CircleSvg from '../../assets/images/circle-line-icon.svg';
 import CircleCheckSvg from '../../assets/images/check-mark-circle-icon.svg';
 import EditSvg from '../../assets/images/edit-box-icon.svg';
@@ -13,25 +18,27 @@ interface ITodoInfo {
 }
 
 const EmptyCircle = () => {
-  return <CircleSvg height={30} width={30} fill={theme.ThemeColor.secondary} />;
+  return <CircleSvg height={30} width={30} fill={theme.ThemeColor.fontColor} />;
 };
 
 const CheckCircle = () => {
   return (
-    <CircleCheckSvg height={30} width={30} fill={theme.ThemeColor.secondary} />
+    <CircleCheckSvg height={30} width={30} fill={theme.ThemeColor.fontColor} />
   );
 };
 
 function TodoInLine({data}: ITodoInfo) {
   return (
-    <TodoInLineContainer key={data.id}>
+    <TodoInLineContainer key={data.id} style={styles.boxShadow}>
       <CheckButton>
         {!data.completed ? <EmptyCircle /> : <CheckCircle />}
       </CheckButton>
-      <Text style={{color: theme.ThemeColor.secondary}}>{data.noteText}</Text>
-      <CheckButton>
-        <EditSvg height={30} width={30} fill={theme.ThemeColor.secondary} />
-      </CheckButton>
+      <TodoTextContainer>
+        <Text style={{color: theme.ThemeColor.fontColor}}>{data.noteText}</Text>
+        <CheckButton>
+          <EditSvg height={30} width={30} fill={theme.ThemeColor.fontColor} />
+        </CheckButton>
+      </TodoTextContainer>
     </TodoInLineContainer>
   );
 }

@@ -2,13 +2,15 @@ type TFavorityColor = {
   primary: string;
   secondary: string;
   tertiary: string;
+  fontColor: string;
 };
 
 const favoriteColor = (): TFavorityColor => {
   const color = {
     primary: '#FEFEFE',
-    secondary: '#03213E',
-    tertiary: '#FBFBFB',
+    secondary: '#FBFBFB',
+    tertiary: '#03213E',
+    fontColor: '#03213E',
   };
   return color;
 };
@@ -17,6 +19,7 @@ export default {
     primary: favoriteColor().primary,
     secondary: favoriteColor().secondary,
     tertiary: favoriteColor().tertiary,
+    fontColor: favoriteColor().fontColor,
   },
   whiteTheme: {
     primary: '#FEFEFE',

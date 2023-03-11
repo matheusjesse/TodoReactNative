@@ -1,7 +1,10 @@
 import {StyleSheet} from 'react-native';
 import styled from 'styled-components/native';
 import theme from '../../styles/theme';
-const HomeContainer = styled.SafeAreaView``;
+const HomeContainer = styled.ScrollView`
+  background-color: ${theme.ThemeColor.primary};
+  height: 100%;
+`;
 
 const Text = styled.Text`
   font-size: 45px;

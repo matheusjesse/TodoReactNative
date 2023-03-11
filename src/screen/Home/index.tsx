@@ -22,7 +22,7 @@ function Home({navigation}: Props): JSX.Element {
     TodoContext,
   ) as TodoContextType;
   return (
-    <HomeContainer>
+    <HomeContainer showsVerticalScrollIndicator={false} overScrollMode="never">
       <Text style={ColorContainer.container}>HomeM!</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Register')}>
         <Text>Click Here</Text>
