@@ -1,6 +1,6 @@
 import TodoInLine from '../TodoInLine';
 import React from 'react';
-import TodoDayPeriodContainer, {styles, Text, TodoCard} from './style';
+import TodoDayPeriodContainer, {Text, TodoCard} from './style';
 const mockTest = [
   {
     id: 2,
@@ -23,7 +23,7 @@ function TodoDayPeriod({title}: {title: string}) {
   return (
     <TodoDayPeriodContainer>
       <Text>{title}</Text>
-      <TodoCard style={styles.boxWithShadow}>
+      <TodoCard>
         {mockTest.map(element => (
           <TodoInLine data={element} />
         ))}

@@ -14,7 +14,7 @@ const Text = styled.Text`
 `;
 const TodoCard = styled.View`
   width: 348px;
-  background: ${theme.ThemeColor.secondary};
+  background: ${theme.ThemeColor.primary};
   border-radius: 10px;
   padding-top: 14px;
   padding-left: 8px;
@@ -24,15 +24,5 @@ const TodoCard = styled.View`
   align-items: center;
 `;
 
-const styles = StyleSheet.create({
-  boxWithShadow: {
-    shadowColor: `${theme.ThemeColor.fontColor}`,
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0,
-    shadowRadius: 0,
-    elevation: 2,
-  },
-});
-
 export default TodoDayPeriodContainer;
-export {Text, TodoCard, styles};
+export {Text, TodoCard};
