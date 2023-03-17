@@ -5,9 +5,25 @@ export const TodoContext = React.createContext<TodoContextType | null>(null);
 
 const TodoProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [themeColor, setThemeColor] = React.useState(true);
-  const [todoRegister, setTodoRegister] = React.useState(
-    {} as TodoRegisterType,
-  );
+  const [todoRegister, setTodoRegister] = React.useState({
+    noteText: '',
+    userId: 0,
+    completed: false,
+    dayPeriod: {
+      morning: false,
+      afternoon: false,
+      night: false,
+    },
+    daysOfTheWeek: {
+      sunday: false,
+      monday: false,
+      tuesday: false,
+      wednesday: false,
+      thrusday: false,
+      friday: false,
+      saturday: false,
+    },
+  } as TodoRegisterType);
 
   const updateTheme = (theme: boolean) => {
     setThemeColor(theme);
