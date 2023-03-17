@@ -20,13 +20,7 @@ const EmptySquare = () => {
 };
 
 const CheckSquare = () => {
-  return (
-    <CheckBox
-      height={20}
-      width={20}
-      fill={theme.ThemeColor.tertiary}
-    />
-  );
+  return <CheckBox height={20} width={20} fill={theme.ThemeColor.tertiary} />;
 };
 
 export default function DayPeriod() {
@@ -74,7 +68,7 @@ export default function DayPeriod() {
       <ButtonContainer style={styles.shadowProp}>
         <DayPeriodButton onPress={() => toggleDayPeriod('morning')}>
           <ImageContainer>
-            {!loadTodo().dayPeriod.morning ? <EmptySquare /> : <CheckSquare />}
+            {loadTodo().dayPeriod.morning ? <CheckSquare /> : <EmptySquare />}
           </ImageContainer>
           <Text>Manhã</Text>
         </DayPeriodButton>
@@ -82,11 +76,7 @@ export default function DayPeriod() {
       <ButtonContainer style={styles.shadowProp}>
         <DayPeriodButton onPress={() => toggleDayPeriod('afternoon')}>
           <ImageContainer>
-            {!loadTodo().dayPeriod.afternoon ? (
-              <EmptySquare />
-            ) : (
-              <CheckSquare />
-            )}
+            {loadTodo().dayPeriod.afternoon ? <CheckSquare /> : <EmptySquare />}
           </ImageContainer>
           <Text>Tarde</Text>
         </DayPeriodButton>
@@ -94,7 +84,7 @@ export default function DayPeriod() {
       <ButtonContainer style={styles.shadowProp}>
         <DayPeriodButton onPress={() => toggleDayPeriod('night')}>
           <ImageContainer>
-            {!loadTodo().dayPeriod.night ? <EmptySquare /> : <CheckSquare />}
+            {loadTodo().dayPeriod.night ? <CheckSquare /> : <EmptySquare />}
           </ImageContainer>
           <Text>Noite</Text>
         </DayPeriodButton>
