@@ -9,12 +9,12 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/screen/Home';
-import Register from './src/screen/Register/index';
+import TodoRegister from './src/screen/TodoRegister/index';
 import TodoProvider from './src/context/todoContext';
 
 export type RootStackParamList = {
   Home: undefined;
-  Register: undefined;
+  TodoRegister: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -28,7 +28,7 @@ function App(): JSX.Element {
             headerShown: false,
           }}>
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="TodoRegister" component={TodoRegister} />
         </Stack.Navigator>
       </NavigationContainer>
     </TodoProvider>

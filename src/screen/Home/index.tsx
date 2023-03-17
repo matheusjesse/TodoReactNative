@@ -24,7 +24,7 @@ function Home({navigation}: Props): JSX.Element {
   return (
     <HomeContainer showsVerticalScrollIndicator={false} overScrollMode="never">
       <Text style={ColorContainer.container}>HomeM!</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+      <TouchableOpacity onPress={() => navigation.navigate('TodoRegister')}>
         <Text>Click Here</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => updateTheme(!loadThemeColor())}>
